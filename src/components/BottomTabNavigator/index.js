@@ -5,29 +5,29 @@ import { faHome, faSearch, faInbox, faUser, faPlus } from '@fortawesome/free-sol
 
 import { Tab, Button, Title, Add } from './styles';
 
-export default function BottomTabNavigator({ navigation, background }) {
+export default function BottomTabNavigator({ navigation, background, colorTitle, colorIcon }) {
     return (
         <Tab background={background}>
             <Button onPress={() => navigation.navigate("Home")}>
-                <FontAwesomeIcon icon={faHome} size={28} color="#FFF" />
-                <Title>Home</Title>
+                <FontAwesomeIcon icon={faHome} size={28} color={colorIcon} />
+                <Title style={{ color: colorTitle }}>Home</Title>
             </Button>
             <Button onPress={() => navigation.navigate("Discover")}>
-                <FontAwesomeIcon icon={faSearch} size={28} color="#FFF" />
-                <Title>Discover</Title>
+                <FontAwesomeIcon icon={faSearch} size={28} color={colorIcon} />
+                <Title style={{ color: colorTitle }}>Discover</Title>
             </Button>
             <Button onPress={() => navigation.navigate("Photo")}>
                 <Add>
-                    <FontAwesomeIcon icon={faPlus} size={20} color="#000" />
+                    <FontAwesomeIcon icon={faPlus} size={20} color="#010101" />
                 </Add>
             </Button>
             <Button onPress={() => navigation.navigate("Inbox")}>
-                <FontAwesomeIcon icon={faInbox} size={28} color="#FFF" />
-                <Title>Inbox</Title>
+                <FontAwesomeIcon icon={faInbox} size={28} color={colorIcon} />
+                <Title style={{ color: colorTitle }}>Inbox</Title>
             </Button>
-            <Button onPress={() => navigation.navigate("Profile")}>
-                <FontAwesomeIcon icon={faUser} size={28} color="#FFF" />
-                <Title>Me</Title>
+            <Button onPress={() => navigation.navigate("Profile", { title: "luiz" })}>
+                <FontAwesomeIcon icon={faUser} size={28} color={colorIcon} />
+                <Title style={{ color: colorTitle }}>Me</Title>
             </Button>
         </Tab>
     )

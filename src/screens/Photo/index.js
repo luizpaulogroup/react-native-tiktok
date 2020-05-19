@@ -9,7 +9,7 @@ export default function Photo({ navigation }) {
     return (
         <Container>
             <View><Text>Photo</Text></View>
-            <BottomTabNavigator background="#222" navigation={navigation} />
+            <BottomTabNavigator background="#010101" colorIcon="#FFF" colorTitle="#FFF" navigation={navigation} />
         </Container>
     )
 }

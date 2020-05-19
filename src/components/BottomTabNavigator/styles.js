@@ -23,7 +23,6 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const Title = styled.Text`
-    color: #FFF;
     font-size: 10px;
 `;
 

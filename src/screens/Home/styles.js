@@ -1,4 +1,17 @@
 import styled from 'styled-components/native';
+import { StyleSheet, Dimensions } from "react-native";
+
+export const styles = StyleSheet.create({
+    backgroundVideo: {
+        alignItems: "stretch",
+        position: "absolute",
+        height: Dimensions.get("window").height,
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+    }
+});
 
 export const Container = styled.SafeAreaView`
     flex: 1;
@@ -43,15 +56,26 @@ export const ContentRight = styled.View`
 `;
 
 export const ContentRightUser = styled.View`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 25px;
     background: red;
     margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #555;
+`;
+
+export const ContentRightUserPlus = styled.View`
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background: #F00;
 `;
 
 export const ContentRightHeart = styled.View`
@@ -81,7 +105,41 @@ export const ContentRightWhatsApp = styled.View`
     justify-content: center;
 `;
 
+export const ContentRightWhatsAppImage = styled.Image`
+   width: 30px;
+   height: 30px;
+`;
+
 export const ContentRightText = styled.Text`
+    margin-top: 10px;
     font-weight: bold;
     color: #FFF;
+`;
+
+export const ContentLeftBottom = styled.View`
+    position: absolute;
+    padding: 10px;
+    left: 5px;
+    bottom: 10%;
+    z-index: 99;
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+`;
+
+export const ContentLeftBottomNameUser = styled.Text`
+    color: #FFF;
+    font-weight: bold;
+`;
+
+export const ContentLeftBottomDescription = styled.Text`
+    margin-top: 10px;
+    color: #FFF;
+`;
+
+export const ContentLeftBottomMusic = styled.Text`
+    margin-top: 10px;
+    color: #FFF;
+    overflow: scroll;
 `;
