@@ -18,7 +18,6 @@ export default function Discover({ navigation }) {
         { url: "https://cdn.mensagenscomamor.com/content/images/m000518052.jpg?v=1&w=600&h=941" },
         { url: "https://66.media.tumblr.com/2170b24c045a368996ed3d0b84e74c4e/tumblr_pjn69mp52s1tbym8o_1280.jpg" },
         { url: "https://i.pinimg.com/564x/27/b4/5c/27b45cfadb28dbd857ebd662fe3cc1fe.jpg" },
-        { url: "https://i.pinimg.com/564x/27/b4/5c/27b45cfadb28dbd857ebd662fe3cc1fe.jpg" },
     ]
 
     const categories = [

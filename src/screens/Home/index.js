@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView, Dimensions } from 'react-native';
 
 import Video from 'react-native-video';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPlus, faHeart, faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faHeart, faCommentDots, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 import BottomTabNavigator from '../../components/BottomTabNavigator';
 
@@ -33,8 +33,11 @@ import {
 
 export default function Home({ navigation }) {
 
+    const [paused, setPaused] = useState(false);
+
     return (
         <View style={{ flex: 1 }}>
+            {paused && <FontAwesomeIcon style={{ zIndex: 999, opacity: 0.8, position: 'absolute', alignSelf: 'center', top: '40%', bottom: '40%', left: '40%', right: '40%' }} icon={faPlay} size={100} color="#E5E5E5" />}
             <NewsByFollowing>
                 <NewsByFollowingText>Following | <NewsByFollowingTextBold>For You</NewsByFollowingTextBold> </NewsByFollowingText>
             </NewsByFollowing>
@@ -45,9 +48,10 @@ export default function Home({ navigation }) {
                         style={{ flex: 1, height: Dimensions.get("window").height, backgroundColor: '#010101' }}>
                         <Video
                             style={styles.backgroundVideo}
-                            source={{ uri: video.url }}
+                            source={video.url}
                             resizeMode="cover"
-                            paused={true}
+                            onTouchStart={() => setPaused(!paused)}
+                            paused={paused}
                             repeat />
                         <ContentRight>
                             <ContentRightUser>
