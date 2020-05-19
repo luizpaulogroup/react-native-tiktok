@@ -1,10 +1,11 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
 
-import 'react-native-gesture-handler';
+import Routes from './src/routes'
 
-const App = () => {
-  return <SafeAreaView />
+function App() {
+  return (
+    <Routes />
+  )
 }
 
 export default App;
