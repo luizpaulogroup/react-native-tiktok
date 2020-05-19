@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUserPlus, faEllipsisH, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faEllipsisH, faChevronLeft, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import Home from '../screens/Home';
 import Discover from '../screens/Discover';
@@ -43,15 +43,17 @@ const Routes = () => (
                 name="Inbox"
                 component={Inbox}
                 options={{
-                    header: () => null,
+                    headerTitle: () => <Text numberOfLines={1} style={{ maxWidth: 150, fontWeight: 'bold', fontSize: 18 }}>All activity</Text>,
+                    headerLeft: () => null,
+                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faPaperPlane} size={25} color="#010101" />,
                 }} />
             <Stack.Screen
                 name="Profile"
                 component={Profile}
                 options={{
                     headerTitle: () => <Text numberOfLines={1} style={{ maxWidth: 150, fontWeight: 'bold', fontSize: 18 }}>user3782787686134324234324</Text>,
-                    headerLeft: () => <FontAwesomeIcon style={{ marginLeft: 10 }} icon={faUserPlus} size={28} color="#010101" />,
-                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEllipsisH} size={28} color="#010101" />,
+                    headerLeft: () => <FontAwesomeIcon style={{ marginLeft: 10 }} icon={faUserPlus} size={25} color="#010101" />,
+                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEllipsisH} size={25} color="#010101" />,
                 }} />
             <Stack.Screen
                 name="User"
@@ -59,7 +61,7 @@ const Routes = () => (
                 options={({ route, navigation }) => ({
                     headerTitle: () => <Text numberOfLines={1} style={{ maxWidth: 150, fontWeight: 'bold', fontSize: 18 }}>{route.params.user.name.replace("@", "")}</Text>,
                     headerLeft: () => <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginLeft: 10 }}><FontAwesomeIcon icon={faChevronLeft} size={25} color="#010101" /></TouchableOpacity>,
-                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEllipsisH} size={28} color="#010101" />,
+                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEllipsisH} size={25} color="#010101" />,
                 })} />
         </Stack.Navigator>
     </NavigationContainer>

@@ -47,7 +47,7 @@ export default function Home({ navigation }) {
                             style={styles.backgroundVideo}
                             source={{ uri: video.url }}
                             resizeMode="cover"
-                            paused={false}
+                            paused={true}
                             repeat />
                         <ContentRight>
                             <ContentRightUser>
