@@ -2,9 +2,6 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHome, faSearch, faInbox, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import Home from '../screens/Home';
 import Discover from '../screens/Discover';
@@ -16,7 +13,8 @@ import User from '../screens/User';
 
 const Stack = createStackNavigator();
 
-<StatusBar hidden />
+StatusBar.setHidden(true);
+
 const Routes = () => (
     <NavigationContainer>
         <Stack.Navigator>

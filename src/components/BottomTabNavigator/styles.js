@@ -34,8 +34,8 @@ export const Add = styled.View`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-left-width: 5px;
-    border-right-width: 5px;
+    border-left-width: 4px;
+    border-right-width: 4px;
     border-radius: 10px;
     border-left-color: #69C9D0;
     border-right-color: #EE1D52;
