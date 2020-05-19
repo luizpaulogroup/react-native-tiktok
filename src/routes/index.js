@@ -1,10 +1,10 @@
 import React from 'react';
-import { StatusBar, Text } from 'react-native';
+import { StatusBar, TouchableOpacity, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUserPlus, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faEllipsisH, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import Home from '../screens/Home';
 import Discover from '../screens/Discover';
@@ -16,7 +16,7 @@ import User from '../screens/User';
 
 const Stack = createStackNavigator();
 
-StatusBar.setHidden(true); 
+StatusBar.setHidden(true);
 
 const Routes = () => (
     <NavigationContainer onStateChange={state => state.index == 0 ? StatusBar.setHidden(true) : StatusBar.setHidden(false)}>
@@ -56,9 +56,11 @@ const Routes = () => (
             <Stack.Screen
                 name="User"
                 component={User}
-                options={{
-                    header: () => null,
-                }} />
+                options={({ route, navigation }) => ({
+                    headerTitle: () => <Text numberOfLines={1} style={{ maxWidth: 150, fontWeight: 'bold', fontSize: 18 }}>{route.params.user.name.replace("@", "")}</Text>,
+                    headerLeft: () => <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginLeft: 10 }}><FontAwesomeIcon icon={faChevronLeft} size={25} color="#010101" /></TouchableOpacity>,
+                    headerRight: () => <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEllipsisH} size={28} color="#010101" />,
+                })} />
         </Stack.Navigator>
     </NavigationContainer>
 )

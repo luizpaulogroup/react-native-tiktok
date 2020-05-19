@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
+import { View, Dimensions, ScrollView } from 'react-native';
 
 import { TabView, SceneMap } from 'react-native-tab-view';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUserAlt, faBookmark, faBars, faLock, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faBars, faLock, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import BottomTabNavigator from '../../components/BottomTabNavigator';
 
@@ -21,26 +21,14 @@ import {
     ButtonEditProfileText,
     ButtonFavorites,
     ButtonAddBio,
-    ButtonAddBioText
+    ButtonAddBioText,
+    Tabs,
+    Tab
 } from './styles';
 
-const posts = () => (
-    <View style={{ width: Dimensions.get("window").width, backgroundColor: '#FFF', height: '100%' }}>
-        <Text>STEP1</Text>
-    </View>
-);
-
-const likeds = () => (
-    <View style={{ width: Dimensions.get("window").width, backgroundColor: '#FFF', height: '100%' }}>
-        <Text>STEP2</Text>
-    </View>
-);
-
-const privates = () => (
-    <View style={{ width: Dimensions.get("window").width, backgroundColor: '#FFF', height: '100%' }}>
-        <Text>STEP2</Text>
-    </View>
-);
+import Posts from '../../components/TabsProfile/Posts';
+import Likeds from '../../components/TabsProfile/Likeds';
+import Privates from '../../components/TabsProfile/Privates';
 
 export default function Profile({ navigation }) {
 
@@ -52,29 +40,27 @@ export default function Profile({ navigation }) {
     ]);
 
     const renderScene = SceneMap({
-        posts: posts,
-        likeds: likeds,
-        privates: privates,
+        posts: Posts,
+        likeds: Likeds,
+        privates: Privates,
     });
 
     return (
         <Container>
             <ScrollView>
-                <UserImage>
-                    <FontAwesomeIcon icon={faUserAlt} size={32} color="#333" />
-                </UserImage>
-                <View style={{ alignItems: 'center' }}><UserName>@tiktok</UserName></View>
+                <UserImage resizeMode="contain" source={require("../../assets/tiktok.png")} />
+                <View><UserName>@tiktok</UserName></View>
                 <UserFollowers>
                     <UserFollowersText>
-                        <UserFollowersTextNumber>3</UserFollowersTextNumber>
+                        <UserFollowersTextNumber>0</UserFollowersTextNumber>
                         <UserFollowersTextDesc>Following</UserFollowersTextDesc>
                     </UserFollowersText>
                     <UserFollowersText>
-                        <UserFollowersTextNumber>1</UserFollowersTextNumber>
+                        <UserFollowersTextNumber>9876003</UserFollowersTextNumber>
                         <UserFollowersTextDesc>Followers</UserFollowersTextDesc>
                     </UserFollowersText>
                     <UserFollowersText>
-                        <UserFollowersTextNumber>0</UserFollowersTextNumber>
+                        <UserFollowersTextNumber>197867</UserFollowersTextNumber>
                         <UserFollowersTextDesc>Likes</UserFollowersTextDesc>
                     </UserFollowersText>
                 </UserFollowers>
@@ -91,17 +77,9 @@ export default function Profile({ navigation }) {
                 </ButtonAddBio>
                 <TabView
                     renderTabBar={props => (
-                        <View style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            borderTopWidth: StyleSheet.hairlineWidth,
-                            borderTopColor: '#E5E5E5',
-                            borderBottomWidth: StyleSheet.hairlineWidth,
-                            borderBottomColor: '#E5E5E5',
-                        }}>
+                        <Tabs>
                             {props.navigationState.routes.map((tab, key) => (
-                                <TouchableOpacity onPress={() => props.jumpTo(tab.key)} style={{ width: '33%', height: 50, alignItems: 'center', justifyContent: 'center' }}>
+                                <Tab key={key} onPress={() => props.jumpTo(tab.key)}>
                                     {tab.key == "posts" &&
                                         <FontAwesomeIcon icon={faBars} size={20} color={key == props.navigationState.index ? "#333" : "#E5E5E5"} />
                                     }
@@ -111,9 +89,9 @@ export default function Profile({ navigation }) {
                                     {tab.key == "privates" &&
                                         <FontAwesomeIcon icon={faLock} size={20} color={key == props.navigationState.index ? "#333" : "#E5E5E5"} />
                                     }
-                                </TouchableOpacity>
+                                </Tab>
                             ))}
-                        </View>
+                        </Tabs>
                     )}
                     style={{ width: Dimensions.get("window").width }}
                     navigationState={{ index, routes }}

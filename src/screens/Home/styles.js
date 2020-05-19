@@ -67,6 +67,12 @@ export const ContentRightUser = styled.TouchableOpacity`
     background: #555;
 `;
 
+export const ContentRightUserImage = styled.Image`
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+`;
+
 export const ContentRightUserPlus = styled.View`
     top: -10px;
     width: 20px;
@@ -128,7 +134,10 @@ export const ContentLeftBottom = styled.View`
     justify-content: center;
 `;
 
-export const ContentLeftBottomNameUser = styled.Text`
+export const ContentLeftBottomNameUser = styled.TouchableOpacity`
+
+`;
+export const ContentLeftBottomNameUserText = styled.Text`
     color: #FFF;
     font-weight: bold;
 `;

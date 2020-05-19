@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { View, ScrollView, Dimensions, Image } from 'react-native';
+import React from 'react';
+import { View, ScrollView, Dimensions } from 'react-native';
 
 import Video from 'react-native-video';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPlus, faHeart, faCommentDots, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faHeart, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 
 import BottomTabNavigator from '../../components/BottomTabNavigator';
+
+import videos from '../../Data/Videos/videos';
 
 import {
     styles,
@@ -15,6 +17,7 @@ import {
     NewsByFollowingTextBold,
     ContentRight,
     ContentRightUser,
+    ContentRightUserImage,
     ContentRightUserPlus,
     ContentRightHeart,
     ContentRightComment,
@@ -23,41 +26,12 @@ import {
     ContentRightText,
     ContentLeftBottom,
     ContentLeftBottomNameUser,
+    ContentLeftBottomNameUserText,
     ContentLeftBottomDescription,
     ContentLeftBottomMusic
 } from './styles';
 
 export default function Home({ navigation }) {
-
-    const [paused, setPaused] = useState(false);
-
-    const _handleStopVideo = () => {
-        setPaused(true)
-    }
-
-    const videos = [
-        {
-            id: 1,
-            url: require("../../Data/Videos/001.mp4"),
-            user: "@tiktok",
-            countLikes: 172,
-            countComments: 111,
-            countWhatsApp: 112,
-            description: "No litoral da região de Marlborough, diversos fiordes, ou “sounds” como definidos na Nova Zelândia, recortam a geografia local e proporcionam diversos passeios turísticos bem fáceis de serem realizados.",
-            music: "Relaxante & Musica Ambiental Clube"
-        },
-        {
-            id: 2,
-            url: require("../../Data/Videos/002.mp4"),
-            user: "@tiktok",
-            countLikes: 1722,
-            countComments: 111,
-            countWhatsApp: 112,
-            description: "Marlborough.",
-            music: "Regenerar-Se: Musica New Age para Relaxar e Dormir"
-        },
-
-    ]
 
     return (
         <View style={{ flex: 1 }}>
@@ -71,18 +45,13 @@ export default function Home({ navigation }) {
                         style={{ flex: 1, height: Dimensions.get("window").height, backgroundColor: '#010101' }}>
                         <Video
                             style={styles.backgroundVideo}
-                            // onTouchStart={() => setPaused(!paused)}
-                            // onTouchMove={() => setPaused(!paused)}
-                            source={video.url}
+                            source={{ uri: video.url }}
                             resizeMode="cover"
-                            ignoreSilentSwitch={"obey"}
-                            rate={1.0}
-                            paused={!paused}
-                            muted={true}
+                            paused={false}
                             repeat />
                         <ContentRight>
                             <ContentRightUser>
-                                <FontAwesomeIcon icon={faUser} size={28} color="#FFF" />
+                                <ContentRightUserImage resizeMode="contain" source={{ uri: video.user.image }} />
                             </ContentRightUser>
                             <ContentRightUserPlus>
                                 <FontAwesomeIcon icon={faPlus} size={12} color="#FFF" />
@@ -101,7 +70,17 @@ export default function Home({ navigation }) {
                             </ContentRightWhatsApp>
                         </ContentRight>
                         <ContentLeftBottom>
-                            <ContentLeftBottomNameUser numberOfLines={1}>{video.user}</ContentLeftBottomNameUser>
+                            <ContentLeftBottomNameUser onPress={() => navigation.navigate("User", {
+                                user: {
+                                    image: video.user.image,
+                                    name: video.user.name,
+                                    following: video.user.following,
+                                    followers: video.user.followers,
+                                    likes: video.user.likes
+                                }
+                            })}>
+                                <ContentLeftBottomNameUserText numberOfLines={1}>{video.user.name}</ContentLeftBottomNameUserText>
+                            </ContentLeftBottomNameUser>
                             <ContentLeftBottomDescription numberOfLines={3}>{video.description}</ContentLeftBottomDescription>
                             <ContentLeftBottomMusic numberOfLines={1}>{video.music}</ContentLeftBottomMusic>
                         </ContentLeftBottom>

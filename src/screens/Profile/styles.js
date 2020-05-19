@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
 
 export const Container = styled.SafeAreaView`
     flex: 1;
@@ -6,15 +7,14 @@ export const Container = styled.SafeAreaView`
     background: #FFF;
 `;
 
-export const UserImage = styled.View`
+export const UserImage = styled.Image`
     align-self: center;
     margin-top: 15px;
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50px;
     border-width: 1px;
-    display: flex;
-    flex-direction: row;
+    border-color: #E5E5E5;
     align-items: center;
     justify-content: center;
 `;
@@ -22,6 +22,7 @@ export const UserImage = styled.View`
 export const UserName = styled.Text`
     margin-top: 20px;
     font-weight: bold;
+    align-self: center;
 `;
 
 export const UserFollowers = styled.View`
@@ -45,6 +46,7 @@ export const UserFollowersTextNumber = styled.Text`
 `;
 
 export const UserFollowersTextDesc = styled.Text`
+    margin-top: 10px;  
     color: #333;
 `;
 
@@ -95,4 +97,21 @@ export const ButtonAddBio = styled.TouchableOpacity`
 
 export const ButtonAddBioText = styled.Text`
     color: #333;
+`;
+
+export const Tabs = styled.View`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top-width: ${StyleSheet.hairlineWidth}px;
+    border-top-color: #E5E5E5;
+    border-bottom-width: ${StyleSheet.hairlineWidth}px;
+    border-bottom-color: #E5E5E5;
+`;
+
+export const Tab = styled.TouchableOpacity`
+    width: 33%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
 `;
