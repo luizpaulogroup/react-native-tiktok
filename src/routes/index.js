@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity, Text } from 'react-native';
+import { Dimensions, StatusBar, TouchableOpacity, TextInput, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -31,7 +31,19 @@ const Routes = () => (
                 name="Discover"
                 component={Discover}
                 options={{
-                    header: () => null,
+                    headerTitle: () => <TextInput
+                        placeholder="Search"
+                        placeholderTextColor="#333"
+                        style={{
+                            flex: 1,
+                            marginBottom: 5,
+                            paddingHorizontal: 15,
+                            alignSelf: 'stretch',
+                            width: Dimensions.get("window").width - 50,
+                            backgroundColor: '#F5F5F5'
+                        }} />,
+                    headerLeft: () => null,
+                    headerRight: () => null,
                 }} />
             <Stack.Screen
                 name="Photo"
