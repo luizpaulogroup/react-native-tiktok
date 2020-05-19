@@ -16,6 +16,8 @@ import User from '../screens/User';
 
 const Stack = createStackNavigator();
 
+StatusBar.setHidden(true); 
+
 const Routes = () => (
     <NavigationContainer onStateChange={state => state.index == 0 ? StatusBar.setHidden(true) : StatusBar.setHidden(false)}>
         <Stack.Navigator>

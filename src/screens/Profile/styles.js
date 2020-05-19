@@ -3,9 +3,11 @@ import styled from 'styled-components/native';
 export const Container = styled.SafeAreaView`
     flex: 1;
     align-items: center;
+    background: #FFF;
 `;
 
 export const UserImage = styled.View`
+    align-self: center;
     margin-top: 15px;
     width: 70px;
     height: 70px;
@@ -43,7 +45,7 @@ export const UserFollowersTextNumber = styled.Text`
 `;
 
 export const UserFollowersTextDesc = styled.Text`
-    color: #010101;
+    color: #333;
 `;
 
 export const EditProfile = styled.View`
@@ -62,12 +64,12 @@ export const ButtonEditProfile = styled.TouchableOpacity`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: solid 1px #010101;
+    border: solid 1px #333;
     padding: 15px;
 `;
 
 export const ButtonEditProfileText = styled.Text`
-    color: #010101;
+    color: #333;
 `;
 
 export const ButtonFavorites = styled.TouchableOpacity`
@@ -77,7 +79,7 @@ export const ButtonFavorites = styled.TouchableOpacity`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: solid 1px #010101;
+    border: solid 1px #333;
     padding: 15px;
 `;
 

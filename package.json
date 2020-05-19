@@ -24,6 +24,7 @@
     "react-native-safe-area-context": "^1.0.0",
     "react-native-screens": "^2.7.0",
     "react-native-svg": "^12.1.0",
+    "react-native-tab-view": "^2.14.0",
     "react-native-video": "^4.4.5",
     "styled-components": "^5.1.0"
   },
