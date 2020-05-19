@@ -63,7 +63,7 @@ export default function Profile({ navigation }) {
                 <UserImage>
                     <FontAwesomeIcon icon={faUserAlt} size={32} color="#333" />
                 </UserImage>
-                <View style={{ alignItems: 'center' }}><UserName>@newzeland_beautiful</UserName></View>
+                <View style={{ alignItems: 'center' }}><UserName>@tiktok</UserName></View>
                 <UserFollowers>
                     <UserFollowersText>
                         <UserFollowersTextNumber>3</UserFollowersTextNumber>

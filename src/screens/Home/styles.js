@@ -55,7 +55,7 @@ export const ContentRight = styled.View`
     justify-content: center;
 `;
 
-export const ContentRightUser = styled.View`
+export const ContentRightUser = styled.TouchableOpacity`
     width: 40px;
     height: 40px;
     border-radius: 25px;
@@ -78,7 +78,7 @@ export const ContentRightUserPlus = styled.View`
     background: #F00;
 `;
 
-export const ContentRightHeart = styled.View`
+export const ContentRightHeart = styled.TouchableOpacity`
     margin-top: 10px;
     margin-bottom: 10px;
     flex: 1;
@@ -87,7 +87,7 @@ export const ContentRightHeart = styled.View`
     justify-content: center;
 `;
 
-export const ContentRightComment = styled.View`
+export const ContentRightComment = styled.TouchableOpacity`
     margin-top: 10px;
     margin-bottom: 10px;
     flex: 1;
@@ -96,7 +96,7 @@ export const ContentRightComment = styled.View`
     justify-content: center;
 `;
 
-export const ContentRightWhatsApp = styled.View`
+export const ContentRightWhatsApp = styled.TouchableOpacity`
     margin-top: 10px;
     margin-bottom: 10px;
     flex: 1;

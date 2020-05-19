@@ -39,7 +39,7 @@ export default function Home({ navigation }) {
         {
             id: 1,
             url: require("../../Data/Videos/001.mp4"),
-            user: "@newzeland",
+            user: "@tiktok",
             countLikes: 172,
             countComments: 111,
             countWhatsApp: 112,
@@ -49,7 +49,7 @@ export default function Home({ navigation }) {
         {
             id: 2,
             url: require("../../Data/Videos/002.mp4"),
-            user: "@newzeland_beautiful",
+            user: "@tiktok",
             countLikes: 1722,
             countComments: 111,
             countWhatsApp: 112,
