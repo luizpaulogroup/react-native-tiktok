@@ -6,3 +6,4 @@
 :tada:
 :sparkles:
 
+![](https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif)
