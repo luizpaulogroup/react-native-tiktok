@@ -6,6 +6,6 @@
 :tada:
 :sparkles:
 
-<h1 align="center">
+<div align="center">
 ![](https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif)
-</h1>
+</div>
