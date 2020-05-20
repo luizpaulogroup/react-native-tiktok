@@ -5,5 +5,5 @@
 <h1 align="center">:ok_hand: :tada: :sparkles:</h1>
 
 <h1 align="center">
-    ![](https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif)
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif"><img alt="Video" title="#video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif" style="max-width:100%;"></a>
 </h1>
