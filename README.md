@@ -7,5 +7,5 @@
 :sparkles:
 
 <div align="center">
-![](https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif)
+    ![](https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif)
 </div>
