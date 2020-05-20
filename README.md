@@ -2,8 +2,6 @@
  
 ### Cloning the TikTok interface, with different navigation.
 
-<h1 align="center">:ok_hand: :tada: :sparkles:</h1>
-
 ### Technologies used
 
 - React Native
