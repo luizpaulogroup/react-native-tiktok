@@ -4,6 +4,13 @@
 
 <h1 align="center">:ok_hand: :tada: :sparkles:</h1>
 
+### Technologies used
+
+- React Native
+- styled-components
+- react-navigation
+- react-native-video
+
 ### GIF
 
 <h1 align="center">
@@ -11,7 +18,6 @@
 </h1>
 
 ### Screenshots
-
 
 <h1 align="center">
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/1.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/1.png" style="max-width:100%;"></a>
