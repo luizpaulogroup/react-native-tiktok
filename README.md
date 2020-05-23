@@ -1,8 +1,8 @@
 <h1 align="center">Cloning the TikTok interface</h1>
 
 <h1 align="center">
-    <img alt="React logo" width="70px" height="50px" src="https://github.com/luizpaulogroup/react-native-spotify/blob/master/src/Gif/react.png" />
-    <img alt="React logo" width="40px" height="40px" src="https://github.com/luizpaulogroup/react-native-spotify/blob/master/src/Gif/tiktok.png" />
+    <img alt="React logo" width="70px" height="50px" src="https://github.com/luizpaulogroup/react-native-tiktok/blob/master/src/assets/react.png" />
+    <img alt="React logo" width="40px" height="40px" src="https://github.com/luizpaulogroup/react-native-tiktok/blob/master/src/assets/tiktok.png" />
     <br>
     TikTok React Native
 </h1>
