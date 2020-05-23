@@ -12,16 +12,16 @@
   <a href="#information_source-how-to-use">How To Use</a>
 </p>
 
-<h1 align="center"><img src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif" /></h1>
 <h1 align="center">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/1.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/1.png" style="max-width:100%;"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/2.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/2.png" style="max-width:100%;"></a>
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/GIF.gif" style="max-width:100%;">
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/1.png" style="max-width:100%;">
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/2.png" style="max-width:100%;">
 </h1>
 
 <h1 align="center">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/3.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/3.png" style="max-width:100%;"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/4.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/4.png" style="max-width:100%;"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/5.png"><img alt="Video" width="350px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/5.png" style="max-width:100%;"></a>
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/3.png" style="max-width:100%;">
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/4.png" style="max-width:100%;">
+    <img width="250px" src="https://github.com/luizpaulogroup/TikTok/blob/master/src/Images/5.png" style="max-width:100%;">
 </h1>
 
 ## :rocket: Technologies
