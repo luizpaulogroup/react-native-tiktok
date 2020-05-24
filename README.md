@@ -33,7 +33,7 @@ This project was developed with the technologies:
 -  [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 -  [styled-components](https://www.styled-components.com/)
 -  [react-native-video](https://github.com/react-native-community/react-native-video)
--  [VS Code][vc]
+-  [Visual Studio Code](https://code.visualstudio.com/)
 
 ## :information_source: How To Use
 
